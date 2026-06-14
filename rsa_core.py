@@ -155,7 +155,7 @@ class RSACore:
         return public_key, private_key
 
     # ==========================
-    # RSA Encrypt
+    # RSA Encrypt cho kieu bytes
     # ==========================
     @staticmethod
     def encrypt(message_bytes, public_key):
@@ -181,7 +181,7 @@ class RSACore:
         return c
 
     # ==========================
-    # RSA Decrypt
+    # RSA Decrypt cho kieu byte
     # ==========================
     @staticmethod
     def decrypt(cipher_int, private_key):
@@ -200,3 +200,34 @@ class RSACore:
             length,
             byteorder="big"
         )
+    
+    # ==========================
+    # RSA encrypt cho kieu so nguyen
+    # ==========================
+    @staticmethod
+    def encrypt_int(message_int, e, n):
+
+        if message_int >= n:
+            raise ValueError(
+                "Message qua lon"
+            )
+
+        return RSACore.mod_exp(
+            message_int,
+            e,
+            n
+        )
+    
+    # ==========================
+    # RSA decrypt cho kieu so nguyen
+    # ==========================
+
+    @staticmethod
+    def decrypt_int(cipher_int, d, n):
+
+        return RSACore.mod_exp(
+            cipher_int,
+            d,
+            n
+        )
+
