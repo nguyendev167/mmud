@@ -1,16 +1,12 @@
-import tkinter as tk
-
-from application import HybridCryptoGUI
-
+import customtkinter as ctk
+from application import ModernHybridCryptoGUI
 
 def main():
-
-    root = tk.Tk()
-
-    app = HybridCryptoGUI(root)
-
+    root = ctk.CTk()
+    
+    app = ModernHybridCryptoGUI(root)
+    
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
