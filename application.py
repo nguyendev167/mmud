@@ -13,7 +13,7 @@ class ModernHybridCryptoGUI:
 
     def __init__(self, root):
         self.root = root
-        self.root.title("🛡️ HỆ THỐNG MÃ HÓA LAI RSA - AES | Nhóm 10_S3")
+        self.root.title("🛡️ HỆ THỐNG MÃ HÓA LAI RSA - AES | Nhóm 6")
         self.root.geometry("880x720")
         self.root.minsize(880, 720)
 
